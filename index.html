@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlLang">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Vicdan Humanitarian Aid Association - Promoting solidarity, compassion, and humanitarian support across Turkic communities"
+    />
+    <title id="pageTitle">
+      Vicdan Humanitarian Aid Association | Building Bridges of Compassion
+    </title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="container">
+        <div class="nav-wrapper">
+          <div class="logo">
+            <img
+              src="logo.png"
+              alt="Vicdan İnsani Yardım Derneği"
+              class="logo-image"
+            />
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li>
+              <a href="#home" class="nav-link" data-i18n="nav.home">Home</a>
+            </li>
+            <li>
+              <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
+            </li>
+            <li>
+              <a href="#mission" class="nav-link" data-i18n="nav.mission"
+                >Mission</a
+              >
+            </li>
+            <li>
+              <a href="#values" class="nav-link" data-i18n="nav.values"
+                >Values</a
+              >
+            </li>
+            <li>
+              <a href="#programs" class="nav-link" data-i18n="nav.programs"
+                >Programs</a
+              >
+            </li>
+            <li>
+              <a href="#support" class="nav-link" data-i18n="nav.support"
+                >Support</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="nav-link" data-i18n="nav.contact"
+                >Contact</a
+              >
+            </li>
+            <li class="lang-selector">
+              <button class="lang-btn active" data-lang="en" id="langEn">
+                EN
+              </button>
+              <span class="lang-separator">|</span>
+              <button class="lang-btn" data-lang="tr" id="langTr">TR</button>
+            </li>
+          </ul>
+          <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-background">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            <span class="title-line" data-i18n="hero.title1"
+              >Building Bridges of</span
+            >
+            <span class="title-line highlight" data-i18n="hero.title2"
+              >Compassion & Unity</span
+            >
+          </h1>
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
+            Empowering communities, preserving heritage, and extending a helping
+            hand to those in need across Turkic nations and beyond.
+          </p>
+          <div class="hero-cta">
+            <a href="#support" class="btn btn-primary" data-i18n="hero.cta1"
+              >Make a Difference</a
+            >
+            <a href="#about" class="btn btn-secondary" data-i18n="hero.cta2"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="about.tag">Who We Are</span>
+          <h2 class="section-title" data-i18n="about.title">About Vicdan</h2>
+          <div class="title-underline"></div>
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <p class="lead" data-i18n="about.lead">
+              Vicdan Humanitarian Aid Association stands as a beacon of hope and
+              solidarity, dedicated to fostering compassion, unity, and
+              meaningful support within and beyond Turkic communities.
+            </p>
+            <p data-i18n="about.p1">
+              Founded on the principles of humanitarian service and cultural
+              preservation, we serve as an <strong>ensar community</strong>—a
+              supportive network that welcomes and assists migrants arriving in
+              Türkiye from Turkic states. Our mission extends beyond immediate
+              aid; we are committed to building lasting foundations for future
+              generations.
+            </p>
+            <p data-i18n="about.p2">
+              Through our comprehensive programs, we address critical needs
+              while nurturing the spiritual and national values that bind our
+              communities together. We believe that true humanitarian work
+              combines immediate relief with long-term empowerment, ensuring
+              that every individual we serve can thrive with dignity and
+              purpose.
+            </p>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card">
+              <div class="stat-number" data-target="1000">0</div>
+              <div class="stat-label" data-i18n="about.stat1">
+                Families Supported
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" data-target="500">0</div>
+              <div class="stat-label" data-i18n="about.stat2">
+                Children Educated
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" data-target="50">0</div>
+              <div class="stat-label" data-i18n="about.stat3">
+                Active Programs
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section id="mission" class="mission">
+      <div class="container">
+        <div class="mission-grid">
+          <div class="mission-card">
+            <div class="card-icon">🎯</div>
+            <h3 class="card-title" data-i18n="mission.title">Our Mission</h3>
+            <p class="card-text" data-i18n="mission.text">
+              To promote solidarity, compassion, and humanitarian support across
+              Turkic communities while serving as a trusted ensar network for
+              migrants. We are dedicated to preserving cultural heritage,
+              strengthening moral foundations, and ensuring access to quality
+              education for all, especially the most vulnerable.
+            </p>
+          </div>
+          <div class="mission-card">
+            <div class="card-icon">🌟</div>
+            <h3 class="card-title" data-i18n="vision.title">Our Vision</h3>
+            <p class="card-text" data-i18n="vision.text">
+              To become a leading force in humanitarian aid and cultural
+              preservation, where every individual—regardless of their
+              origin—finds support, dignity, and opportunity. We envision a
+              world where Turkic communities are united in brotherhood, where
+              children grow with strong values, and where compassion transcends
+              borders.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section id="values" class="values">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="values.tag">Our Foundation</span>
+          <h2 class="section-title" data-i18n="values.title">Core Values</h2>
+          <div class="title-underline"></div>
+        </div>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon">❤️</div>
+            <h3 class="value-title" data-i18n="values.compassion.title">
+              Compassion
+            </h3>
+            <p class="value-description" data-i18n="values.compassion.desc">
+              We approach every individual with empathy and understanding,
+              recognizing the inherent dignity in all human beings.
+            </p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🤝</div>
+            <h3 class="value-title" data-i18n="values.solidarity.title">
+              Solidarity
+            </h3>
+            <p class="value-description" data-i18n="values.solidarity.desc">
+              We stand together as one community, supporting each other through
+              challenges and celebrating shared successes.
+            </p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🏛️</div>
+            <h3 class="value-title" data-i18n="values.cultural.title">
+              Cultural Preservation
+            </h3>
+            <p class="value-description" data-i18n="values.cultural.desc">
+              We honor and protect the rich heritage, traditions, and spiritual
+              values that define our identity and strengthen our bonds.
+            </p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">📚</div>
+            <h3 class="value-title" data-i18n="values.education.title">
+              Education
+            </h3>
+            <p class="value-description" data-i18n="values.education.desc">
+              We believe education is the cornerstone of empowerment, providing
+              pathways to opportunity and personal growth.
+            </p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">⚖️</div>
+            <h3 class="value-title" data-i18n="values.integrity.title">
+              Integrity
+            </h3>
+            <p class="value-description" data-i18n="values.integrity.desc">
+              We operate with transparency, accountability, and ethical
+              principles in all our actions and decisions.
+            </p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🌍</div>
+            <h3 class="value-title" data-i18n="values.inclusivity.title">
+              Inclusivity
+            </h3>
+            <p class="value-description" data-i18n="values.inclusivity.desc">
+              We welcome all who seek support, fostering an environment of
+              acceptance and mutual respect.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programs & Initiatives Section -->
+    <section id="programs" class="programs">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="programs.tag">What We Do</span>
+          <h2 class="section-title" data-i18n="programs.title">
+            Programs & Initiatives
+          </h2>
+          <div class="title-underline"></div>
+        </div>
+        <div class="programs-grid">
+          <div class="program-card">
+            <div class="program-image">
+              <div class="program-icon">🏠</div>
+            </div>
+            <div class="program-content">
+              <h3 class="program-title" data-i18n="programs.migrant.title">
+                Migrant Support Services
+              </h3>
+              <p class="program-description" data-i18n="programs.migrant.desc">
+                Comprehensive assistance for families arriving from Turkic
+                states, including housing support, legal guidance, language
+                education, and integration programs that help newcomers build
+                new lives with dignity.
+              </p>
+              <ul class="program-features">
+                <li data-i18n="programs.migrant.f1">
+                  Housing assistance and temporary shelter
+                </li>
+                <li data-i18n="programs.migrant.f2">
+                  Legal and administrative support
+                </li>
+                <li data-i18n="programs.migrant.f3">
+                  Language and cultural orientation
+                </li>
+                <li data-i18n="programs.migrant.f4">
+                  Employment and skills training
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="program-card">
+            <div class="program-image">
+              <div class="program-icon">👨‍👩‍👧‍👦</div>
+            </div>
+            <div class="program-content">
+              <h3 class="program-title" data-i18n="programs.education.title">
+                Children's Education & Development
+              </h3>
+              <p
+                class="program-description"
+                data-i18n="programs.education.desc"
+              >
+                Ensuring every child receives quality education while
+                maintaining strong moral foundations. Our programs combine
+                academic excellence with character development, preserving
+                cultural identity and values.
+              </p>
+              <ul class="program-features">
+                <li data-i18n="programs.education.f1">
+                  Scholarship and educational support
+                </li>
+                <li data-i18n="programs.education.f2">
+                  After-school programs and tutoring
+                </li>
+                <li data-i18n="programs.education.f3">
+                  Moral and character education
+                </li>
+                <li data-i18n="programs.education.f4">
+                  Cultural heritage workshops
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="program-card">
+            <div class="program-image">
+              <div class="program-icon">🌱</div>
+            </div>
+            <div class="program-content">
+              <h3 class="program-title" data-i18n="programs.cultural.title">
+                Cultural Preservation
+              </h3>
+              <p class="program-description" data-i18n="programs.cultural.desc">
+                Protecting and celebrating the rich traditions, languages, and
+                spiritual values of Turkic communities through workshops,
+                events, and educational initiatives that connect generations.
+              </p>
+              <ul class="program-features">
+                <li data-i18n="programs.cultural.f1">
+                  Cultural festivals and celebrations
+                </li>
+                <li data-i18n="programs.cultural.f2">
+                  Language preservation programs
+                </li>
+                <li data-i18n="programs.cultural.f3">
+                  Traditional arts and crafts workshops
+                </li>
+                <li data-i18n="programs.cultural.f4">
+                  Intergenerational storytelling
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="program-card">
+            <div class="program-image">
+              <div class="program-icon">🤲</div>
+            </div>
+            <div class="program-content">
+              <h3 class="program-title" data-i18n="programs.emergency.title">
+                Emergency Relief & Aid
+              </h3>
+              <p
+                class="program-description"
+                data-i18n="programs.emergency.desc"
+              >
+                Rapid response to urgent needs, providing essential supplies,
+                medical assistance, and financial support to families facing
+                crises, natural disasters, or unexpected hardships.
+              </p>
+              <ul class="program-features">
+                <li data-i18n="programs.emergency.f1">
+                  Food and essential supplies distribution
+                </li>
+                <li data-i18n="programs.emergency.f2">
+                  Medical and healthcare assistance
+                </li>
+                <li data-i18n="programs.emergency.f3">
+                  Emergency financial aid
+                </li>
+                <li data-i18n="programs.emergency.f4">
+                  Crisis counseling and support
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="program-card">
+            <div class="program-image">
+              <div class="program-icon">💼</div>
+            </div>
+            <div class="program-content">
+              <h3 class="program-title" data-i18n="programs.community.title">
+                Community Building
+              </h3>
+              <p
+                class="program-description"
+                data-i18n="programs.community.desc"
+              >
+                Strengthening bonds of brotherhood through regular gatherings,
+                networking events, mentorship programs, and collaborative
+                initiatives that unite communities.
+              </p>
+              <ul class="program-features">
+                <li data-i18n="programs.community.f1">
+                  Community gatherings and events
+                </li>
+                <li data-i18n="programs.community.f2">
+                  Mentorship and networking programs
+                </li>
+                <li data-i18n="programs.community.f3">
+                  Volunteer coordination
+                </li>
+                <li data-i18n="programs.community.f4">
+                  Collaborative community projects
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="program-card">
+            <div class="program-image">
+              <div class="program-icon">🎓</div>
+            </div>
+            <div class="program-content">
+              <h3 class="program-title" data-i18n="programs.youth.title">
+                Youth Empowerment
+              </h3>
+              <p class="program-description" data-i18n="programs.youth.desc">
+                Investing in the next generation through leadership development,
+                career guidance, skill-building workshops, and opportunities
+                that prepare youth for meaningful futures.
+              </p>
+              <ul class="program-features">
+                <li data-i18n="programs.youth.f1">
+                  Leadership development programs
+                </li>
+                <li data-i18n="programs.youth.f2">
+                  Career counseling and guidance
+                </li>
+                <li data-i18n="programs.youth.f3">Skill-building workshops</li>
+                <li data-i18n="programs.youth.f4">
+                  Youth mentorship initiatives
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Support / Donate Section -->
+    <section id="support" class="support">
+      <div class="container">
+        <div class="support-content">
+          <div class="support-text">
+            <span class="section-tag" data-i18n="support.tag"
+              >Join Our Cause</span
+            >
+            <h2 class="section-title" data-i18n="support.title">
+              Make a Lasting Impact
+            </h2>
+            <div class="title-underline"></div>
+            <p class="support-description" data-i18n="support.desc1">
+              Your support enables us to continue our vital work of providing
+              humanitarian aid, preserving cultural heritage, and empowering
+              communities. Every contribution, no matter the size, creates
+              ripples of positive change that extend far beyond what we can see.
+            </p>
+            <p class="support-description" data-i18n="support.desc2">
+              Together, we can build a future where compassion knows no borders,
+              where children grow with strong values and quality education, and
+              where every individual has the opportunity to thrive.
+            </p>
+            <div class="support-options">
+              <div class="support-option">
+                <h4 data-i18n="support.option1.title">One-Time Donation</h4>
+                <p data-i18n="support.option1.desc">
+                  Make a single contribution to support our ongoing programs and
+                  initiatives.
+                </p>
+              </div>
+              <div class="support-option">
+                <h4 data-i18n="support.option2.title">Monthly Support</h4>
+                <p data-i18n="support.option2.desc">
+                  Become a sustaining member with a recurring monthly donation.
+                </p>
+              </div>
+              <div class="support-option">
+                <h4 data-i18n="support.option3.title">Volunteer</h4>
+                <p data-i18n="support.option3.desc">
+                  Join our team of dedicated volunteers and make a hands-on
+                  difference.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="donation-form">
+            <h3 data-i18n="support.form.title">Support Our Mission</h3>
+            <form id="donationForm">
+              <div class="form-group">
+                <label for="amount" data-i18n="support.form.amount"
+                  >Donation Amount</label
+                >
+                <div class="amount-options">
+                  <button type="button" class="amount-btn" data-amount="50">
+                    $50
+                  </button>
+                  <button type="button" class="amount-btn" data-amount="100">
+                    $100
+                  </button>
+                  <button type="button" class="amount-btn" data-amount="250">
+                    $250
+                  </button>
+                  <button type="button" class="amount-btn" data-amount="500">
+                    $500
+                  </button>
+                </div>
+                <input
+                  type="number"
+                  id="amount"
+                  name="amount"
+                  data-i18n-placeholder="support.form.amountPlaceholder"
+                  placeholder="Or enter custom amount"
+                  min="1"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="name" data-i18n="support.form.name"
+                  >Full Name</label
+                >
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email" data-i18n="support.form.email"
+                  >Email Address</label
+                >
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="phone" data-i18n="support.form.phone"
+                  >Phone Number</label
+                >
+                <input type="tel" id="phone" name="phone" />
+              </div>
+              <div class="form-group">
+                <label>
+                  <input type="checkbox" name="recurring" />
+                  <span data-i18n="support.form.recurring"
+                    >Make this a monthly recurring donation</span
+                  >
+                </label>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary btn-block"
+                data-i18n="support.form.submit"
+              >
+                Donate Now
+              </button>
+              <p class="form-note" data-i18n="support.form.note">
+                Your donation is secure and tax-deductible. We respect your
+                privacy and will never share your information.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="contact.tag">Get in Touch</span>
+          <h2 class="section-title" data-i18n="contact.title">Contact Us</h2>
+          <div class="title-underline"></div>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <p class="contact-intro" data-i18n="contact.intro">
+              We'd love to hear from you. Whether you're seeking assistance,
+              interested in volunteering, or have questions about our programs,
+              our team is here to help.
+            </p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                  <h4 data-i18n="contact.address.title">Address</h4>
+                  <p>Istanbul, Türkiye</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div>
+                  <h4 data-i18n="contact.email.title">Email</h4>
+                  <p>info@vicdan.org</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">📱</div>
+                <div>
+                  <h4 data-i18n="contact.phone.title">Phone</h4>
+                  <p>+90 (XXX) XXX XX XX</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">🕒</div>
+                <div>
+                  <h4 data-i18n="contact.hours.title">Office Hours</h4>
+                  <p data-i18n="contact.hours.weekdays">
+                    Monday - Friday: 9:00 AM - 6:00 PM
+                  </p>
+                  <p data-i18n="contact.hours.saturday">
+                    Saturday: 10:00 AM - 4:00 PM
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form-wrapper">
+            <form id="contactForm" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contactName" data-i18n="contact.form.name"
+                    >Full Name *</label
+                  >
+                  <input type="text" id="contactName" name="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="contactEmail" data-i18n="contact.form.email"
+                    >Email Address *</label
+                  >
+                  <input type="email" id="contactEmail" name="email" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="contactPhone" data-i18n="contact.form.phone"
+                  >Phone Number</label
+                >
+                <input type="tel" id="contactPhone" name="phone" />
+              </div>
+              <div class="form-group">
+                <label for="subject" data-i18n="contact.form.subject"
+                  >Subject *</label
+                >
+                <select id="subject" name="subject" required>
+                  <option value="" data-i18n="contact.form.subjectSelect">
+                    Select a subject
+                  </option>
+                  <option value="general" data-i18n="contact.form.subject1">
+                    General Inquiry
+                  </option>
+                  <option value="support" data-i18n="contact.form.subject2">
+                    Seeking Support
+                  </option>
+                  <option value="volunteer" data-i18n="contact.form.subject3">
+                    Volunteer Opportunity
+                  </option>
+                  <option value="donation" data-i18n="contact.form.subject4">
+                    Donation Question
+                  </option>
+                  <option value="program" data-i18n="contact.form.subject5">
+                    Program Information
+                  </option>
+                  <option value="other" data-i18n="contact.form.subject6">
+                    Other
+                  </option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message" data-i18n="contact.form.message"
+                  >Message *</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary btn-block"
+                data-i18n="contact.form.submit"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <img
+                src="logo.png"
+                alt="Vicdan İnsani Yardım Derneği"
+                class="logo-image"
+              />
+            </div>
+            <p class="footer-description" data-i18n="footer.description">
+              Building bridges of compassion and unity across Turkic communities
+              and beyond.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-title" data-i18n="footer.quickLinks">
+              Quick Links
+            </h4>
+            <ul class="footer-links">
+              <li><a href="#about" data-i18n="footer.about">About Us</a></li>
+              <li>
+                <a href="#mission" data-i18n="footer.mission"
+                  >Mission & Vision</a
+                >
+              </li>
+              <li>
+                <a href="#programs" data-i18n="footer.programs">Programs</a>
+              </li>
+              <li>
+                <a href="#support" data-i18n="footer.support">Support Us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-title" data-i18n="footer.getInvolved">
+              Get Involved
+            </h4>
+            <ul class="footer-links">
+              <li><a href="#support" data-i18n="footer.donate">Donate</a></li>
+              <li>
+                <a href="#contact" data-i18n="footer.volunteer">Volunteer</a>
+              </li>
+              <li><a href="#contact" data-i18n="footer.contact">Contact</a></li>
+              <li>
+                <a href="#programs" data-i18n="footer.ourPrograms"
+                  >Our Programs</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-title" data-i18n="footer.connect">Connect</h4>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Facebook">📘</a>
+              <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+              <a href="#" class="social-link" aria-label="Instagram">📷</a>
+              <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p data-i18n="footer.copyright">
+            &copy; 2024 Vicdan Humanitarian Aid Association. All rights
+            reserved.
+          </p>
+          <p class="footer-legal">
+            <a href="#" data-i18n="footer.privacy">Privacy Policy</a> |
+            <a href="#" data-i18n="footer.terms">Terms of Service</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

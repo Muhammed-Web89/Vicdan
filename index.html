@@ -1,799 +1,713 @@
 <!DOCTYPE html>
-<html lang="en" id="htmlLang">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Vicdan Humanitarian Aid Association - Promoting solidarity, compassion, and humanitarian support across Turkic communities"
-    />
-    <title id="pageTitle">
-      Vicdan Humanitarian Aid Association | Building Bridges of Compassion
-    </title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vicdan İnsani Yardım Derneği - İyilik Sınır Tanımaz</title>
+    <meta name="description"
+        content="Vicdan İnsani Yardım Derneği - Dünyanın dört bir yanındaki mazlumların sesi, umudu ve vicdanı oluyoruz.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-      <div class="container">
-        <div class="nav-wrapper">
-          <div class="logo">
-            <img
-              src="logo.png"
-              alt="Vicdan İnsani Yardım Derneği"
-              class="logo-image"
-            />
-          </div>
-          <ul class="nav-menu" id="navMenu">
-            <li>
-              <a href="#home" class="nav-link" data-i18n="nav.home">Home</a>
-            </li>
-            <li>
-              <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
-            </li>
-            <li>
-              <a href="#mission" class="nav-link" data-i18n="nav.mission"
-                >Mission</a
-              >
-            </li>
-            <li>
-              <a href="#values" class="nav-link" data-i18n="nav.values"
-                >Values</a
-              >
-            </li>
-            <li>
-              <a href="#programs" class="nav-link" data-i18n="nav.programs"
-                >Programs</a
-              >
-            </li>
-            <li>
-              <a href="#support" class="nav-link" data-i18n="nav.support"
-                >Support</a
-              >
-            </li>
-            <li>
-              <a href="#contact" class="nav-link" data-i18n="nav.contact"
-                >Contact</a
-              >
-            </li>
-            <li class="lang-selector">
-              <button class="lang-btn active" data-lang="en" id="langEn">
-                EN
-              </button>
-              <span class="lang-separator">|</span>
-              <button class="lang-btn" data-lang="tr" id="langTr">TR</button>
-            </li>
-          </ul>
-          <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4DA1D1',
+                        secondary: '#286090',
+                        accent: '#E81D29',
+                        light: '#F8F9FA'
+                    },
+                    fontFamily: {
+                        display: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(40, 96, 144, 0.85) 0%, rgba(77, 161, 209, 0.8) 100%),
+                url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1920') center/cover fixed;
+        }
+
+        .parallax-section {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .parallax-1 {
+            background: linear-gradient(rgba(40, 96, 144, 0.7), rgba(40, 96, 144, 0.7)),
+                url('https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1920') center/cover fixed;
+        }
+
+        .parallax-2 {
+            background: linear-gradient(rgba(77, 161, 209, 0.8), rgba(40, 96, 144, 0.8)),
+                url('https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=1920') center/cover fixed;
+        }
+
+        .geometric-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 0L80 40L40 80L0 40L40 0z' fill='%234DA1D1' fill-opacity='0.03'/%3E%3C/svg%3E");
+        }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(77, 161, 209, 0.2);
+        }
+
+        .btn-glow {
+            transition: all 0.3s ease;
+        }
+
+        .btn-glow:hover {
+            box-shadow: 0 0 40px rgba(232, 29, 41, 0.5);
+            transform: scale(1.05);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #4DA1D1;
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .wave-divider svg {
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 80px;
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #4DA1D1, #286090);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800">
+    <!-- Navbar -->
+    <nav id="navbar"
+        class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-white/95 backdrop-blur-lg shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#" class="flex-shrink-0">
+                    <img src="images/logo.png" alt="Vicdan Derneği" class="h-14 w-auto">
+                </a>
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#hakkimizda"
+                        class="nav-link relative text-secondary font-medium hover:text-primary transition">Hakkımızda</a>
+                    <a href="#neden-biz"
+                        class="nav-link relative text-secondary font-medium hover:text-primary transition">Neden
+                        Biz?</a>
+                    <a href="#faaliyetler"
+                        class="nav-link relative text-secondary font-medium hover:text-primary transition">Projelerimiz</a>
+                    <a href="#gonullu"
+                        class="nav-link relative text-secondary font-medium hover:text-primary transition">Gönüllü
+                        Ol</a>
+                    <a href="#bagis"
+                        class="nav-link relative text-secondary font-medium hover:text-primary transition">Bağış</a>
+                </div>
+                <a href="#bagis"
+                    class="hidden lg:block bg-accent hover:bg-red-700 text-white font-bold px-6 py-3 rounded-full transition btn-glow">
+                    BAĞIŞ YAP
+                </a>
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-secondary">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
         </div>
-      </div>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t shadow-xl">
+            <div class="px-6 py-6 space-y-4">
+                <a href="#hakkimizda"
+                    class="block py-3 text-secondary font-medium hover:text-primary border-b border-gray-100">Hakkımızda</a>
+                <a href="#neden-biz"
+                    class="block py-3 text-secondary font-medium hover:text-primary border-b border-gray-100">Neden
+                    Biz?</a>
+                <a href="#faaliyetler"
+                    class="block py-3 text-secondary font-medium hover:text-primary border-b border-gray-100">Projelerimiz</a>
+                <a href="#gonullu"
+                    class="block py-3 text-secondary font-medium hover:text-primary border-b border-gray-100">Gönüllü
+                    Ol</a>
+                <a href="#bagis"
+                    class="block py-3 text-secondary font-medium hover:text-primary border-b border-gray-100">Bağış</a>
+                <a href="#bagis" class="block bg-accent text-white text-center font-bold py-4 rounded-full mt-4">BAĞIŞ
+                    YAP</a>
+            </div>
+        </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="hero-background">
-        <div class="hero-overlay"></div>
-      </div>
-      <div class="container">
-        <div class="hero-content">
-          <h1 class="hero-title">
-            <span class="title-line" data-i18n="hero.title1"
-              >Building Bridges of</span
-            >
-            <span class="title-line highlight" data-i18n="hero.title2"
-              >Compassion & Unity</span
-            >
-          </h1>
-          <p class="hero-subtitle" data-i18n="hero.subtitle">
-            Empowering communities, preserving heritage, and extending a helping
-            hand to those in need across Turkic nations and beyond.
-          </p>
-          <div class="hero-cta">
-            <a href="#support" class="btn btn-primary" data-i18n="hero.cta1"
-              >Make a Difference</a
-            >
-            <a href="#about" class="btn btn-secondary" data-i18n="hero.cta2"
-              >Learn More</a
-            >
-          </div>
-        </div>
-      </div>
-      <div class="scroll-indicator">
-        <div class="mouse">
-          <div class="wheel"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Us Section -->
-    <section id="about" class="about">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag" data-i18n="about.tag">Who We Are</span>
-          <h2 class="section-title" data-i18n="about.title">About Vicdan</h2>
-          <div class="title-underline"></div>
-        </div>
-        <div class="about-content">
-          <div class="about-text">
-            <p class="lead" data-i18n="about.lead">
-              Vicdan Humanitarian Aid Association stands as a beacon of hope and
-              solidarity, dedicated to fostering compassion, unity, and
-              meaningful support within and beyond Turkic communities.
-            </p>
-            <p data-i18n="about.p1">
-              Founded on the principles of humanitarian service and cultural
-              preservation, we serve as an <strong>ensar community</strong>—a
-              supportive network that welcomes and assists migrants arriving in
-              Türkiye from Turkic states. Our mission extends beyond immediate
-              aid; we are committed to building lasting foundations for future
-              generations.
-            </p>
-            <p data-i18n="about.p2">
-              Through our comprehensive programs, we address critical needs
-              while nurturing the spiritual and national values that bind our
-              communities together. We believe that true humanitarian work
-              combines immediate relief with long-term empowerment, ensuring
-              that every individual we serve can thrive with dignity and
-              purpose.
-            </p>
-          </div>
-          <div class="about-stats">
-            <div class="stat-card">
-              <div class="stat-number" data-target="1000">0</div>
-              <div class="stat-label" data-i18n="about.stat1">
-                Families Supported
-              </div>
+    <section class="hero-bg min-h-screen flex items-center justify-center relative">
+        <div class="max-w-5xl mx-auto px-4 text-center text-white pt-20">
+            <div class="inline-block px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-8 border border-white/20">
+                <p class="text-sm md:text-base font-medium tracking-widest uppercase text-white/90">Vicdan İnsani Yardım
+                    Derneği</p>
             </div>
-            <div class="stat-card">
-              <div class="stat-number" data-target="500">0</div>
-              <div class="stat-label" data-i18n="about.stat2">
-                Children Educated
-              </div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number" data-target="50">0</div>
-              <div class="stat-label" data-i18n="about.stat3">
-                Active Programs
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Mission & Vision Section -->
-    <section id="mission" class="mission">
-      <div class="container">
-        <div class="mission-grid">
-          <div class="mission-card">
-            <div class="card-icon">🎯</div>
-            <h3 class="card-title" data-i18n="mission.title">Our Mission</h3>
-            <p class="card-text" data-i18n="mission.text">
-              To promote solidarity, compassion, and humanitarian support across
-              Turkic communities while serving as a trusted ensar network for
-              migrants. We are dedicated to preserving cultural heritage,
-              strengthening moral foundations, and ensuring access to quality
-              education for all, especially the most vulnerable.
-            </p>
-          </div>
-          <div class="mission-card">
-            <div class="card-icon">🌟</div>
-            <h3 class="card-title" data-i18n="vision.title">Our Vision</h3>
-            <p class="card-text" data-i18n="vision.text">
-              To become a leading force in humanitarian aid and cultural
-              preservation, where every individual—regardless of their
-              origin—finds support, dignity, and opportunity. We envision a
-              world where Turkic communities are united in brotherhood, where
-              children grow with strong values, and where compassion transcends
-              borders.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Core Values Section -->
-    <section id="values" class="values">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag" data-i18n="values.tag">Our Foundation</span>
-          <h2 class="section-title" data-i18n="values.title">Core Values</h2>
-          <div class="title-underline"></div>
-        </div>
-        <div class="values-grid">
-          <div class="value-card">
-            <div class="value-icon">❤️</div>
-            <h3 class="value-title" data-i18n="values.compassion.title">
-              Compassion
-            </h3>
-            <p class="value-description" data-i18n="values.compassion.desc">
-              We approach every individual with empathy and understanding,
-              recognizing the inherent dignity in all human beings.
-            </p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon">🤝</div>
-            <h3 class="value-title" data-i18n="values.solidarity.title">
-              Solidarity
-            </h3>
-            <p class="value-description" data-i18n="values.solidarity.desc">
-              We stand together as one community, supporting each other through
-              challenges and celebrating shared successes.
-            </p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon">🏛️</div>
-            <h3 class="value-title" data-i18n="values.cultural.title">
-              Cultural Preservation
-            </h3>
-            <p class="value-description" data-i18n="values.cultural.desc">
-              We honor and protect the rich heritage, traditions, and spiritual
-              values that define our identity and strengthen our bonds.
-            </p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon">📚</div>
-            <h3 class="value-title" data-i18n="values.education.title">
-              Education
-            </h3>
-            <p class="value-description" data-i18n="values.education.desc">
-              We believe education is the cornerstone of empowerment, providing
-              pathways to opportunity and personal growth.
-            </p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon">⚖️</div>
-            <h3 class="value-title" data-i18n="values.integrity.title">
-              Integrity
-            </h3>
-            <p class="value-description" data-i18n="values.integrity.desc">
-              We operate with transparency, accountability, and ethical
-              principles in all our actions and decisions.
-            </p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon">🌍</div>
-            <h3 class="value-title" data-i18n="values.inclusivity.title">
-              Inclusivity
-            </h3>
-            <p class="value-description" data-i18n="values.inclusivity.desc">
-              We welcome all who seek support, fostering an environment of
-              acceptance and mutual respect.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Programs & Initiatives Section -->
-    <section id="programs" class="programs">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag" data-i18n="programs.tag">What We Do</span>
-          <h2 class="section-title" data-i18n="programs.title">
-            Programs & Initiatives
-          </h2>
-          <div class="title-underline"></div>
-        </div>
-        <div class="programs-grid">
-          <div class="program-card">
-            <div class="program-image">
-              <div class="program-icon">🏠</div>
-            </div>
-            <div class="program-content">
-              <h3 class="program-title" data-i18n="programs.migrant.title">
-                Migrant Support Services
-              </h3>
-              <p class="program-description" data-i18n="programs.migrant.desc">
-                Comprehensive assistance for families arriving from Turkic
-                states, including housing support, legal guidance, language
-                education, and integration programs that help newcomers build
-                new lives with dignity.
-              </p>
-              <ul class="program-features">
-                <li data-i18n="programs.migrant.f1">
-                  Housing assistance and temporary shelter
-                </li>
-                <li data-i18n="programs.migrant.f2">
-                  Legal and administrative support
-                </li>
-                <li data-i18n="programs.migrant.f3">
-                  Language and cultural orientation
-                </li>
-                <li data-i18n="programs.migrant.f4">
-                  Employment and skills training
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="program-card">
-            <div class="program-image">
-              <div class="program-icon">👨‍👩‍👧‍👦</div>
-            </div>
-            <div class="program-content">
-              <h3 class="program-title" data-i18n="programs.education.title">
-                Children's Education & Development
-              </h3>
-              <p
-                class="program-description"
-                data-i18n="programs.education.desc"
-              >
-                Ensuring every child receives quality education while
-                maintaining strong moral foundations. Our programs combine
-                academic excellence with character development, preserving
-                cultural identity and values.
-              </p>
-              <ul class="program-features">
-                <li data-i18n="programs.education.f1">
-                  Scholarship and educational support
-                </li>
-                <li data-i18n="programs.education.f2">
-                  After-school programs and tutoring
-                </li>
-                <li data-i18n="programs.education.f3">
-                  Moral and character education
-                </li>
-                <li data-i18n="programs.education.f4">
-                  Cultural heritage workshops
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="program-card">
-            <div class="program-image">
-              <div class="program-icon">🌱</div>
-            </div>
-            <div class="program-content">
-              <h3 class="program-title" data-i18n="programs.cultural.title">
-                Cultural Preservation
-              </h3>
-              <p class="program-description" data-i18n="programs.cultural.desc">
-                Protecting and celebrating the rich traditions, languages, and
-                spiritual values of Turkic communities through workshops,
-                events, and educational initiatives that connect generations.
-              </p>
-              <ul class="program-features">
-                <li data-i18n="programs.cultural.f1">
-                  Cultural festivals and celebrations
-                </li>
-                <li data-i18n="programs.cultural.f2">
-                  Language preservation programs
-                </li>
-                <li data-i18n="programs.cultural.f3">
-                  Traditional arts and crafts workshops
-                </li>
-                <li data-i18n="programs.cultural.f4">
-                  Intergenerational storytelling
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="program-card">
-            <div class="program-image">
-              <div class="program-icon">🤲</div>
-            </div>
-            <div class="program-content">
-              <h3 class="program-title" data-i18n="programs.emergency.title">
-                Emergency Relief & Aid
-              </h3>
-              <p
-                class="program-description"
-                data-i18n="programs.emergency.desc"
-              >
-                Rapid response to urgent needs, providing essential supplies,
-                medical assistance, and financial support to families facing
-                crises, natural disasters, or unexpected hardships.
-              </p>
-              <ul class="program-features">
-                <li data-i18n="programs.emergency.f1">
-                  Food and essential supplies distribution
-                </li>
-                <li data-i18n="programs.emergency.f2">
-                  Medical and healthcare assistance
-                </li>
-                <li data-i18n="programs.emergency.f3">
-                  Emergency financial aid
-                </li>
-                <li data-i18n="programs.emergency.f4">
-                  Crisis counseling and support
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="program-card">
-            <div class="program-image">
-              <div class="program-icon">💼</div>
-            </div>
-            <div class="program-content">
-              <h3 class="program-title" data-i18n="programs.community.title">
-                Community Building
-              </h3>
-              <p
-                class="program-description"
-                data-i18n="programs.community.desc"
-              >
-                Strengthening bonds of brotherhood through regular gatherings,
-                networking events, mentorship programs, and collaborative
-                initiatives that unite communities.
-              </p>
-              <ul class="program-features">
-                <li data-i18n="programs.community.f1">
-                  Community gatherings and events
-                </li>
-                <li data-i18n="programs.community.f2">
-                  Mentorship and networking programs
-                </li>
-                <li data-i18n="programs.community.f3">
-                  Volunteer coordination
-                </li>
-                <li data-i18n="programs.community.f4">
-                  Collaborative community projects
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="program-card">
-            <div class="program-image">
-              <div class="program-icon">🎓</div>
-            </div>
-            <div class="program-content">
-              <h3 class="program-title" data-i18n="programs.youth.title">
-                Youth Empowerment
-              </h3>
-              <p class="program-description" data-i18n="programs.youth.desc">
-                Investing in the next generation through leadership development,
-                career guidance, skill-building workshops, and opportunities
-                that prepare youth for meaningful futures.
-              </p>
-              <ul class="program-features">
-                <li data-i18n="programs.youth.f1">
-                  Leadership development programs
-                </li>
-                <li data-i18n="programs.youth.f2">
-                  Career counseling and guidance
-                </li>
-                <li data-i18n="programs.youth.f3">Skill-building workshops</li>
-                <li data-i18n="programs.youth.f4">
-                  Youth mentorship initiatives
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Support / Donate Section -->
-    <section id="support" class="support">
-      <div class="container">
-        <div class="support-content">
-          <div class="support-text">
-            <span class="section-tag" data-i18n="support.tag"
-              >Join Our Cause</span
-            >
-            <h2 class="section-title" data-i18n="support.title">
-              Make a Lasting Impact
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+                style="text-shadow: 0 4px 30px rgba(0,0,0,0.3);">
+                Dünyayı değiştirmeye gücümüz yetmeyebilir,
+            </h1>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-yellow-300 mb-10 leading-tight"
+                style="text-shadow: 0 4px 30px rgba(0,0,0,0.3);">
+                ama bir insanın dünyasını değiştirmek bizim elimizde.
             </h2>
-            <div class="title-underline"></div>
-            <p class="support-description" data-i18n="support.desc1">
-              Your support enables us to continue our vital work of providing
-              humanitarian aid, preserving cultural heritage, and empowering
-              communities. Every contribution, no matter the size, creates
-              ripples of positive change that extend far beyond what we can see.
+            <p class="text-base md:text-lg lg:text-xl mb-12 text-white/90 max-w-3xl mx-auto leading-relaxed font-light"
+                style="text-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+                Adaleti, merhameti ve dayanışmayı büyütmek için yola çıktık.<br class="hidden sm:block">
+                Sadece bir isim değil; <span class="font-semibold text-white">bir el, bir ses, bir umut</span> olmak
+                için buradayız.
             </p>
-            <p class="support-description" data-i18n="support.desc2">
-              Together, we can build a future where compassion knows no borders,
-              where children grow with strong values and quality education, and
-              where every individual has the opportunity to thrive.
-            </p>
-            <div class="support-options">
-              <div class="support-option">
-                <h4 data-i18n="support.option1.title">One-Time Donation</h4>
-                <p data-i18n="support.option1.desc">
-                  Make a single contribution to support our ongoing programs and
-                  initiatives.
-                </p>
-              </div>
-              <div class="support-option">
-                <h4 data-i18n="support.option2.title">Monthly Support</h4>
-                <p data-i18n="support.option2.desc">
-                  Become a sustaining member with a recurring monthly donation.
-                </p>
-              </div>
-              <div class="support-option">
-                <h4 data-i18n="support.option3.title">Volunteer</h4>
-                <p data-i18n="support.option3.desc">
-                  Join our team of dedicated volunteers and make a hands-on
-                  difference.
-                </p>
-              </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#gonullu"
+                    class="group bg-white text-secondary font-semibold px-8 py-4 rounded-full hover:bg-gray-50 transition-all transform hover:scale-105 hover:shadow-xl flex items-center justify-center gap-2">
+                    <span>Gönüllü Ol</span>
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
+                <a href="#faaliyetler"
+                    class="group border-2 border-white/80 text-white font-semibold px-8 py-4 rounded-full hover:bg-white hover:text-secondary transition-all flex items-center justify-center gap-2">
+                    <span>Projelerimiz</span>
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </a>
             </div>
-          </div>
-          <div class="donation-form">
-            <h3 data-i18n="support.form.title">Support Our Mission</h3>
-            <form id="donationForm">
-              <div class="form-group">
-                <label for="amount" data-i18n="support.form.amount"
-                  >Donation Amount</label
-                >
-                <div class="amount-options">
-                  <button type="button" class="amount-btn" data-amount="50">
-                    $50
-                  </button>
-                  <button type="button" class="amount-btn" data-amount="100">
-                    $100
-                  </button>
-                  <button type="button" class="amount-btn" data-amount="250">
-                    $250
-                  </button>
-                  <button type="button" class="amount-btn" data-amount="500">
-                    $500
-                  </button>
-                </div>
-                <input
-                  type="number"
-                  id="amount"
-                  name="amount"
-                  data-i18n-placeholder="support.form.amountPlaceholder"
-                  placeholder="Or enter custom amount"
-                  min="1"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="name" data-i18n="support.form.name"
-                  >Full Name</label
-                >
-                <input type="text" id="name" name="name" required />
-              </div>
-              <div class="form-group">
-                <label for="email" data-i18n="support.form.email"
-                  >Email Address</label
-                >
-                <input type="email" id="email" name="email" required />
-              </div>
-              <div class="form-group">
-                <label for="phone" data-i18n="support.form.phone"
-                  >Phone Number</label
-                >
-                <input type="tel" id="phone" name="phone" />
-              </div>
-              <div class="form-group">
-                <label>
-                  <input type="checkbox" name="recurring" />
-                  <span data-i18n="support.form.recurring"
-                    >Make this a monthly recurring donation</span
-                  >
-                </label>
-              </div>
-              <button
-                type="submit"
-                class="btn btn-primary btn-block"
-                data-i18n="support.form.submit"
-              >
-                Donate Now
-              </button>
-              <p class="form-note" data-i18n="support.form.note">
-                Your donation is secure and tax-deductible. We respect your
-                privacy and will never share your information.
-              </p>
-            </form>
-          </div>
         </div>
-      </div>
+        <div class="absolute bottom-0 left-0 right-0 wave-divider">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" fill="#ffffff">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C57.1,118.92,156.63,69.08,321.39,56.44Z" />
+            </svg>
+        </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag" data-i18n="contact.tag">Get in Touch</span>
-          <h2 class="section-title" data-i18n="contact.title">Contact Us</h2>
-          <div class="title-underline"></div>
-        </div>
-        <div class="contact-content">
-          <div class="contact-info">
-            <p class="contact-intro" data-i18n="contact.intro">
-              We'd love to hear from you. Whether you're seeking assistance,
-              interested in volunteering, or have questions about our programs,
-              our team is here to help.
-            </p>
-            <div class="contact-details">
-              <div class="contact-item">
-                <div class="contact-icon">📍</div>
-                <div>
-                  <h4 data-i18n="contact.address.title">Address</h4>
-                  <p>Istanbul, Türkiye</p>
+    <!-- Stats Bar -->
+    <section class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="fade-up">
+                    <p class="text-4xl md:text-5xl font-bold gradient-text">2018</p>
+                    <p class="text-gray-500 mt-2">Kuruluş Yılı</p>
                 </div>
-              </div>
-              <div class="contact-item">
-                <div class="contact-icon">📧</div>
-                <div>
-                  <h4 data-i18n="contact.email.title">Email</h4>
-                  <p>info@vicdan.org</p>
+                <div class="fade-up">
+                    <p class="text-4xl md:text-5xl font-bold gradient-text">15K+</p>
+                    <p class="text-gray-500 mt-2">Aileye Ulaştık</p>
                 </div>
-              </div>
-              <div class="contact-item">
-                <div class="contact-icon">📱</div>
-                <div>
-                  <h4 data-i18n="contact.phone.title">Phone</h4>
-                  <p>+90 (XXX) XXX XX XX</p>
+                <div class="fade-up">
+                    <p class="text-4xl md:text-5xl font-bold gradient-text">50+</p>
+                    <p class="text-gray-500 mt-2">Tamamlanan Proje</p>
                 </div>
-              </div>
-              <div class="contact-item">
-                <div class="contact-icon">🕒</div>
-                <div>
-                  <h4 data-i18n="contact.hours.title">Office Hours</h4>
-                  <p data-i18n="contact.hours.weekdays">
-                    Monday - Friday: 9:00 AM - 6:00 PM
-                  </p>
-                  <p data-i18n="contact.hours.saturday">
-                    Saturday: 10:00 AM - 4:00 PM
-                  </p>
+                <div class="fade-up">
+                    <p class="text-4xl md:text-5xl font-bold gradient-text">12</p>
+                    <p class="text-gray-500 mt-2">Ülkede Faaliyet</p>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="contact-form-wrapper">
-            <form id="contactForm" class="contact-form">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="contactName" data-i18n="contact.form.name"
-                    >Full Name *</label
-                  >
-                  <input type="text" id="contactName" name="name" required />
-                </div>
-                <div class="form-group">
-                  <label for="contactEmail" data-i18n="contact.form.email"
-                    >Email Address *</label
-                  >
-                  <input type="email" id="contactEmail" name="email" required />
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="contactPhone" data-i18n="contact.form.phone"
-                  >Phone Number</label
-                >
-                <input type="tel" id="contactPhone" name="phone" />
-              </div>
-              <div class="form-group">
-                <label for="subject" data-i18n="contact.form.subject"
-                  >Subject *</label
-                >
-                <select id="subject" name="subject" required>
-                  <option value="" data-i18n="contact.form.subjectSelect">
-                    Select a subject
-                  </option>
-                  <option value="general" data-i18n="contact.form.subject1">
-                    General Inquiry
-                  </option>
-                  <option value="support" data-i18n="contact.form.subject2">
-                    Seeking Support
-                  </option>
-                  <option value="volunteer" data-i18n="contact.form.subject3">
-                    Volunteer Opportunity
-                  </option>
-                  <option value="donation" data-i18n="contact.form.subject4">
-                    Donation Question
-                  </option>
-                  <option value="program" data-i18n="contact.form.subject5">
-                    Program Information
-                  </option>
-                  <option value="other" data-i18n="contact.form.subject6">
-                    Other
-                  </option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="message" data-i18n="contact.form.message"
-                  >Message *</label
-                >
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="6"
-                  required
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                class="btn btn-primary btn-block"
-                data-i18n="contact.form.submit"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
         </div>
-      </div>
+    </section>
+
+    <!-- Hakkımızda -->
+    <section id="hakkimizda" class="py-24 bg-light geometric-pattern">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16 fade-up">
+                <span class="text-primary font-semibold uppercase tracking-widest text-sm">Biz Kimiz?</span>
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary mt-4">Hakkımızda</h2>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="fade-up">
+                    <p class="text-xl text-gray-600 leading-relaxed mb-8">
+                        Vicdan İnsani Yardım Derneği, <strong class="text-secondary">2018 yılında Başakşehir'de</strong>
+                        filizlenen bir iyilik hareketidir.
+                        Amacımız; savaşların gölgesinde, göç yollarında ve yoksulluğun kıskacında kalan her cana
+                        dokunmaktır.
+                    </p>
+                    <p class="text-xl text-gray-600 leading-relaxed mb-8">
+                        Özellikle Türk devletlerinden gelen <strong class="text-secondary">muhacir
+                            kardeşlerimiz</strong> ve yerli ihtiyaç sahipleri için
+                        bir <strong class="text-secondary">'Ensar' topluluğu</strong> olma gayesindeyiz.
+                    </p>
+                    <div class="flex items-center gap-4 mt-8">
+                        <div class="w-1 h-16 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
+                        <p class="text-lg text-gray-500 italic">"Hz. Peygamber'in öğrettiği Ensar-Muhacir kardeşlik
+                            ruhunu yaşatıyoruz."</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-6 fade-up">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg text-center card-hover">
+                        <div
+                            class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-2">Misyon</h3>
+                        <p class="text-gray-600 text-sm">Mazlumların yanında olmak ve onlara umut olmak.</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-8 shadow-lg text-center card-hover">
+                        <div
+                            class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-2">Vizyon</h3>
+                        <p class="text-gray-600 text-sm">İyiliğin sınır tanımadığı bir dünya inşa etmek.</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-8 shadow-lg text-center card-hover">
+                        <div
+                            class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-2">Değerler</h3>
+                        <p class="text-gray-600 text-sm">Adalet, merhamet, şeffaflık ve emanet bilinci.</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-8 shadow-lg text-center card-hover">
+                        <div
+                            class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-2">Kardeşlik</h3>
+                        <p class="text-gray-600 text-sm">Ensar-Muhacir kardeşliğini yaşatmak.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax Quote -->
+    <section class="parallax-1 py-32">
+        <div class="max-w-4xl mx-auto px-4 text-center text-white">
+            <svg class="w-16 h-16 mx-auto mb-8 opacity-50" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
+            </svg>
+            <p class="text-2xl md:text-4xl font-light leading-relaxed italic">
+                "Bir insanı kurtaran, bütün insanlığı kurtarmış gibidir."
+            </p>
+            <p class="mt-6 text-lg opacity-80">— Kur'an-ı Kerim, Mâide Suresi, 32</p>
+        </div>
+    </section>
+
+    <!-- Neden Biz -->
+    <section id="neden-biz" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 fade-up">
+                    <div class="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-3xl p-2">
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-2xl">
+                            <img src="images/volunteers.png" alt="Gönüllü Ekibimiz" class="w-full h-80 object-cover">
+                            <div class="p-8">
+                                <h4 class="text-xl font-bold text-secondary mb-3">Profesyonel Gönüllüler</h4>
+                                <p class="text-gray-600">Her biri alanında uzman, vicdanıyla hareket eden
+                                    gönüllülerimiz.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 fade-up">
+                    <span class="text-primary font-semibold uppercase tracking-widest text-sm">Emanet Bilinci</span>
+                    <h2 class="text-4xl md:text-5xl font-bold text-secondary mt-4 mb-8">Neden Biz?</h2>
+                    <p class="text-xl text-gray-600 leading-relaxed mb-6">
+                        Gelin, uzmanlığınızı ve vaktinizi iyilikle buluşturalım.
+                    </p>
+                    <p class="text-xl text-gray-600 leading-relaxed mb-6">
+                        <strong class="text-secondary">"Emaneti ehline teslim etme"</strong> düsturuyla yönetim ve
+                        komisyonlarımızı
+                        üyelerimizin uzmanlık ve tecrübesiyle şekillendiriyoruz.
+                    </p>
+                    <p class="text-xl text-gray-600 leading-relaxed mb-8">
+                        İyilik hareketinin mutfağında yer alarak, profesyonel yetkinliklerinizle mazlumlara umut
+                        olabilirsiniz.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center gap-2 bg-light px-4 py-2 rounded-full">
+                            <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                            </svg>
+                            <span class="text-secondary font-medium">Şeffaf Yönetim</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-light px-4 py-2 rounded-full">
+                            <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                            </svg>
+                            <span class="text-secondary font-medium">Uzman Kadro</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-light px-4 py-2 rounded-full">
+                            <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                            </svg>
+                            <span class="text-secondary font-medium">Denetlenebilir</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Değerlerimiz -->
+    <section class="py-24 bg-light geometric-pattern">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16 fade-up">
+                <span class="text-primary font-semibold uppercase tracking-widest text-sm">Temel İlkelerimiz</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-secondary mt-4">Değerlerimiz</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-3xl p-10 shadow-xl card-hover text-center fade-up">
+                    <div
+                        class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-6 rotate-3">
+                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-4">İlahi Ölçü</h3>
+                    <p class="text-gray-600">Kur'an ve Sünnet rehberliğinde ahlaki sadakat.</p>
+                </div>
+                <div class="bg-white rounded-3xl p-10 shadow-xl card-hover text-center fade-up">
+                    <div
+                        class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-6 -rotate-3">
+                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-4">Koşulsuz Adalet</h3>
+                    <p class="text-gray-600">Din, dil, ırk ayrımı gözetmeksizin yardım.</p>
+                </div>
+                <div class="bg-white rounded-3xl p-10 shadow-xl card-hover text-center fade-up">
+                    <div
+                        class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-6 rotate-3">
+                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-4">Şeffaflık</h3>
+                    <p class="text-gray-600">Her bağışın kuruşu kuruşuna denetimi.</p>
+                </div>
+                <div class="bg-white rounded-3xl p-10 shadow-xl card-hover text-center fade-up">
+                    <div
+                        class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-6 -rotate-3">
+                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-4">Emanet Bilinci</h3>
+                    <p class="text-gray-600">Bağışı 'vebal' bilerek hedefe ulaştırmak.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faaliyetler -->
+    <section id="faaliyetler" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16 fade-up">
+                <span class="text-primary font-semibold uppercase tracking-widest text-sm">Neler Yapıyoruz?</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-secondary mt-4">Faaliyet Alanlarımız</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="group relative overflow-hidden rounded-3xl shadow-2xl card-hover h-80 fade-up">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary"></div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-8 text-white text-center">
+                        <svg class="w-16 h-16 mb-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M18.06 23h1.66c.84 0 1.53-.64 1.63-1.46L23 5l-5 2V1h-2v9l-5-2-5 2V1H4v6l-2 .8v15.2c0 .53.43.96.96.96h.04c.53 0 .96-.43.96-.96V12l5-2v8.25c-.6.35-1 .98-1 1.7v2c0 1.1.9 2 2 2h3c1.1 0 2-.9 2-2v-2c0-.72-.4-1.35-1-1.7V8l5 2v13z" />
+                        </svg>
+                        <h3 class="text-2xl font-bold mb-3">Gıda & Temel İhtiyaç</h3>
+                        <p class="opacity-90">Aşevi, gıda kolisi, market kartı</p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-3xl shadow-2xl card-hover h-80 fade-up">
+                    <div class="absolute inset-0 bg-gradient-to-br from-green-500 to-green-700"></div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-8 text-white text-center">
+                        <svg class="w-16 h-16 mb-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z" />
+                        </svg>
+                        <h3 class="text-2xl font-bold mb-3">Sağlık</h3>
+                        <p class="opacity-90">Katarakt ameliyatları, sünnet</p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-3xl shadow-2xl card-hover h-80 fade-up">
+                    <div class="absolute inset-0 bg-gradient-to-br from-amber-500 to-amber-700"></div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-8 text-white text-center">
+                        <svg class="w-16 h-16 mb-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm0 12.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
+                        </svg>
+                        <h3 class="text-2xl font-bold mb-3">Kalıcı Eserler</h3>
+                        <p class="opacity-90">Su kuyuları, külliyeler</p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-3xl shadow-2xl card-hover h-80 fade-up">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-500 to-purple-700"></div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-8 text-white text-center">
+                        <svg class="w-16 h-16 mb-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+                        </svg>
+                        <h3 class="text-2xl font-bold mb-3">Sosyal Destek</h3>
+                        <p class="opacity-90">Yetim aylığı, eğitim bursları</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gönüllü CTA -->
+    <section id="gonullu" class="parallax-2 py-32">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="bg-white/95 backdrop-blur-lg rounded-3xl p-12 md:p-16 shadow-2xl fade-up">
+                <div
+                    class="w-24 h-24 bg-gradient-to-br from-accent to-red-700 rounded-full flex items-center justify-center mx-auto mb-8">
+                    <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-secondary mb-6">Vicdanınıza İhtiyacımız Var</h2>
+                <p class="text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+                    Aşağıdaki butona tıklayarak Gönüllü Başvuru Formumuzu doldurabilir, uzmanlık alanınıza en uygun
+                    komisyonu
+                    seçerek bu iyilik hareketinin bir parçası olabilirsiniz.
+                </p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScvoqw2MWPRYheuZ-AN3taWeLEKiGidtmkMxPxjOeez-6Mb2w/viewform"
+                    target="_blank"
+                    class="inline-block bg-accent hover:bg-red-700 text-white font-bold text-lg md:text-xl px-12 py-5 rounded-full transition btn-glow">
+                    Gönüllü Başvuru Formunu Doldur & Üye Ol
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bağış -->
+    <section id="bagis" class="py-24 bg-gradient-to-br from-secondary to-primary relative overflow-hidden">
+        <div class="absolute inset-0 geometric-pattern opacity-20"></div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-16 fade-up">
+                <span class="text-yellow-300 font-semibold uppercase tracking-widest text-sm">Destek Olun</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mt-4">İyilik Kervanına Katılın</h2>
+                <p class="text-xl text-white/90 mt-6 max-w-2xl mx-auto">Mazlumun duası, sizin vefanızla göğe yükselir.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-3xl p-10 shadow-2xl card-hover text-center fade-up">
+                    <div
+                        class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M4 10h3v7H4zM10.5 10h3v7h-3zM2 19h20v3H2zM17 10h3v7h-3zM12 1L2 6v2h20V6z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-4">Banka / EFT</h3>
+                    <div class="bg-light rounded-xl p-4 mb-4">
+                        <p class="text-sm text-gray-500 mb-1">IBAN</p>
+                        <p class="font-mono text-secondary font-medium text-sm">TR00 0000 0000 0000 0000 0000 00</p>
+                    </div>
+                    <p class="text-gray-600">Ziraat Bankası - Vicdan Derneği</p>
+                </div>
+                <div
+                    class="bg-white rounded-3xl p-10 shadow-2xl card-hover text-center transform md:scale-105 relative fade-up">
+                    <div
+                        class="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white text-sm font-bold px-6 py-2 rounded-full">
+                        ÖNERİLEN</div>
+                    <div
+                        class="w-20 h-20 bg-gradient-to-br from-accent to-red-700 rounded-2xl flex items-center justify-center mx-auto mb-6 mt-4">
+                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-4">Online Bağış</h3>
+                    <p class="text-gray-600 mb-6">Web sitesi üzerinden güvenli ödeme yapabilirsiniz.</p>
+                    <a href="#"
+                        class="inline-block bg-accent hover:bg-red-700 text-white font-bold px-8 py-3 rounded-full transition btn-glow">Hemen
+                        Bağış Yap</a>
+                </div>
+                <div class="bg-white rounded-3xl p-10 shadow-2xl card-hover text-center fade-up">
+                    <div
+                        class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-4">Elden Bağış</h3>
+                    <p class="text-gray-600 mb-4">Dernek merkezimize bizzat ziyaret ederek bağışınızı teslim
+                        edebilirsiniz.</p>
+                    <p class="text-primary font-semibold">Başakşehir, İstanbul</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-section">
-            <div class="footer-logo">
-              <img
-                src="logo.png"
-                alt="Vicdan İnsani Yardım Derneği"
-                class="logo-image"
-              />
+    <footer id="iletisim" class="bg-secondary text-white py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <img src="images/logo.png" alt="Vicdan Derneği" class="h-20 w-auto brightness-0 invert mb-6">
+                    <p class="text-white/80 leading-relaxed text-lg">İyilik sınır tanımaz. Mazlumların sesi, umudu ve
+                        vicdanı oluyoruz.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Hızlı Linkler</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#hakkimizda"
+                                class="text-white/80 hover:text-white transition text-lg">Hakkımızda</a></li>
+                        <li><a href="#faaliyetler"
+                                class="text-white/80 hover:text-white transition text-lg">Projelerimiz</a></li>
+                        <li><a href="#gonullu" class="text-white/80 hover:text-white transition text-lg">Gönüllü Ol</a>
+                        </li>
+                        <li><a href="#bagis" class="text-white/80 hover:text-white transition text-lg">Bağış Yap</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6">İletişim</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                            </svg>
+                            <span class="text-white/80 text-lg">0533 424 88 08</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                            </svg>
+                            <span class="text-white/80 text-lg">Başakşehir, İstanbul</span>
+                        </li>
+                    </ul>
+                    <div class="flex gap-4 mt-8">
+                        <a href="#"
+                            class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-primary transition"><svg
+                                class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                            </svg></a>
+                        <a href="#"
+                            class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-primary transition"><svg
+                                class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z" />
+                            </svg></a>
+                        <a href="#"
+                            class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-primary transition"><svg
+                                class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg></a>
+                        <a href="#"
+                            class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-primary transition"><svg
+                                class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                            </svg></a>
+                    </div>
+                </div>
             </div>
-            <p class="footer-description" data-i18n="footer.description">
-              Building bridges of compassion and unity across Turkic communities
-              and beyond.
-            </p>
-          </div>
-          <div class="footer-section">
-            <h4 class="footer-title" data-i18n="footer.quickLinks">
-              Quick Links
-            </h4>
-            <ul class="footer-links">
-              <li><a href="#about" data-i18n="footer.about">About Us</a></li>
-              <li>
-                <a href="#mission" data-i18n="footer.mission"
-                  >Mission & Vision</a
-                >
-              </li>
-              <li>
-                <a href="#programs" data-i18n="footer.programs">Programs</a>
-              </li>
-              <li>
-                <a href="#support" data-i18n="footer.support">Support Us</a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h4 class="footer-title" data-i18n="footer.getInvolved">
-              Get Involved
-            </h4>
-            <ul class="footer-links">
-              <li><a href="#support" data-i18n="footer.donate">Donate</a></li>
-              <li>
-                <a href="#contact" data-i18n="footer.volunteer">Volunteer</a>
-              </li>
-              <li><a href="#contact" data-i18n="footer.contact">Contact</a></li>
-              <li>
-                <a href="#programs" data-i18n="footer.ourPrograms"
-                  >Our Programs</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h4 class="footer-title" data-i18n="footer.connect">Connect</h4>
-            <div class="social-links">
-              <a href="#" class="social-link" aria-label="Facebook">📘</a>
-              <a href="#" class="social-link" aria-label="Twitter">🐦</a>
-              <a href="#" class="social-link" aria-label="Instagram">📷</a>
-              <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+            <div class="border-t border-white/20 pt-8 text-center">
+                <p class="text-white/60">© 2026 Vicdan İnsani Yardım Derneği. Tüm Hakları Saklıdır.</p>
             </div>
-          </div>
         </div>
-        <div class="footer-bottom">
-          <p data-i18n="footer.copyright">
-            &copy; 2024 Vicdan Humanitarian Aid Association. All rights
-            reserved.
-          </p>
-          <p class="footer-legal">
-            <a href="#" data-i18n="footer.privacy">Privacy Policy</a> |
-            <a href="#" data-i18n="footer.terms">Terms of Service</a>
-          </p>
-        </div>
-      </div>
     </footer>
 
-    <script src="script.js"></script>
-  </body>
+    <script>
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.setAttribute('d', mobileMenu.classList.contains('hidden') ? 'M4 6h16M4 12h16M4 18h16' : 'M6 18L18 6M6 6l12 12');
+        });
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // Fade in on scroll
+        const fadeElements = document.querySelectorAll('.fade-up');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        fadeElements.forEach(el => observer.observe(el));
+    </script>
+</body>
+
 </html>

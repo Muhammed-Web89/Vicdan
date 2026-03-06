@@ -350,19 +350,35 @@ düsturuyla, kendi toprağımızdaki ihtiyaç sahiplerinden başladık.
     <!-- Neden Biz -->
     <section id="neden-biz" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="order-2 lg:order-1 fade-up">
-                    <div class="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-3xl p-2">
-                        <div class="bg-white rounded-2xl overflow-hidden shadow-2xl">
-                            <img src="volunteers.png" alt="Gönüllü Ekibimiz" class="w-full h-80 object-cover">
-                            <div class="p-8">
-                                <h4 class="text-xl font-bold text-secondary mb-3">Profesyonel Gönüllüler</h4>
-                                <p class="text-gray-600">Her biri alanında uzman, vicdanıyla hareket eden
-                                    gönüllülerimiz.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div style="
+    position: relative; 
+    width: 100%; 
+    padding-bottom: 64.5%; /* Görselin oranını korumak için (700/452 orantısı) */
+    height: 0; 
+    overflow: hidden; 
+    border-radius: 20px; /* Görseldeki yuvarlak köşeler */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Hafif derinlik efekti */
+">
+    <iframe 
+        style="
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            border: none;
+        " 
+        src="https://www.youtube.com/embed/D8tRvgURc5U?rel=0" 
+        title="Vicdan İnsani Yardım Derneği" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+</div>
+
+<div style="padding: 20px 0;">
+    <h3 style="color: #1a4d80; font-weight: bold; margin-bottom: 10px;">Profesyonel Gönüllüler</h3>
+    <p style="color: #666;">Her biri alanında uzman, vicdanıyla hareket eden gönüllülerimiz.</p>
+</div>
                 <div class="order-1 lg:order-2 fade-up">
                     <span class="text-primary font-semibold uppercase tracking-widest text-sm">Emanet Bilinci</span>
                     <h2 class="text-4xl md:text-5xl font-bold text-secondary mt-4 mb-8">Neden Biz?</h2>
